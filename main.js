@@ -10,17 +10,14 @@ const generateHaiku = () => {
     let line3 = haikuLines.possibleLine3[Math.floor(Math.random() * haikuLines.possibleLine1.length)]
     let newHaiku= [line1, line2, line3]
     newHaiku.forEach(line => {
-        let divLine = document.createElement("div")
+        let divLine = document.createElement("p")
         let currLine = document.createTextNode(line)
         divLine.appendChild(currLine)
-        const currentDiv = document.getElementById("haikuLine")
+        const currentDiv = document.createElement("div")
         document.body.insertBefore(currentDiv, currLine)
-        console.log(line)
+        console.log(linde)
     })
     return newHaiku
 }
-
-generateHaiku()
-
 
 document.getElementById("haikuGenerator").onclick = generateHaiku()
